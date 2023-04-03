@@ -1,0 +1,17 @@
+{
+  "name": "chat_injector",
+  "version": "1.0.0",
+  "description": "Takes screenshot of external site and injects a floating chat button on to page.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ethan Gruenemeier",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^19.8.2"
+  }
+}
