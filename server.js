@@ -133,7 +133,7 @@ console.log("Hello Ethan, Welcome to Chat Injector!");
 			console.log('Successfully downloaded small logo!');
 		});
 		} catch (err) { 
-		throw new Error(err);
+			throw new Error(err);
 		}
 	}; 
 
@@ -152,16 +152,17 @@ console.log("Hello Ethan, Welcome to Chat Injector!");
 
 // Store chat button code in var and inject into webpage
 	const injectCode = async (codeToInject) => {
+		console.log(codeToInject);
 		app.get("/", (req, res) => {
-			res.send("<html>" +
-			"<head>" +
-				"<title>B+S Demo</title>" +
-			"</head>" +
-			"<body style='padding: 0; margin: 0'>" +
-				"<h1 style='margin: 1em 0em 1em 9em;'>A Mile High Coding Website</h1>"+
-				"<img src='screenshot.png' width='100%'/>" +
-				codeToInject +
-			"</body>"+
-			"</html>");
-		})
+			res.sendFile(path.join(__dirname, '/footerStatic.html'));
+			// res.send("<html>" +
+			// 	"<head>" +
+			// 		"<title>B+S Demo</title>" +
+			// 	"</head>" +
+			// 	"<body style='padding: 0; margin: 0'>" +
+			// 		"<h1 style='margin: 1em 0em 1em 9em;'>A Mile High Coding Website</h1>"+
+			// 		"<img src='screenshot.png' width='100%'/>" +
+			// 	"</body>"+
+			// 	"</html>");
+		});
 	};
